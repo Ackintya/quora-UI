@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { LoginComponent } from "./components/login/login.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
 // Material Imports
@@ -55,7 +55,8 @@ import { AnswercardComponent } from './components/answercard/answercard.componen
     MatSidenavModule,
     MatButtonModule,
     MatListModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent],

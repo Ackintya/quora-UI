@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
 
   public login(): void {
-    console.log('inside login');
     this.loginService
       .postData(this.baseUrl, this.restUrl, this.userCredentialForm.value)
       .subscribe((data: any) => {

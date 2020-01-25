@@ -1,18 +1,20 @@
 <!-- MAT-CARD STARTS -->
 <mat-card class="example-card">
   <mat-card-content>
-    <mat-form-field class="example-full-width">
-      <textarea matInput placeholder="Post a Question"></textarea>
-    </mat-form-field>
+    <form [formGroup]="postQuestionForm">
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Post a Question" formControlName="question"></textarea>
+      </mat-form-field>
+    </form>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary">Post</button>
+    <button mat-raised-button color="primary" (click)="postQuestion()">Post</button>
     <button mat-raised-button color="warn">Cancel</button>
   </mat-card-actions>
 </mat-card>
 <!-- MAT-CARD ENDS -->
 <!-- ANSWER COMPONENT STARTS -->
-<div>
+<div *ngIf="showAnswerCard">
   <app-answercard></app-answercard>
 </div>
 <!-- ANSWER COMPONENTS ENDS -->
