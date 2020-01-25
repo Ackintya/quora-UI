@@ -1,0 +1,17 @@
+.example-card {
+    height: 130px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: auto;
+    background-color: aqua;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  
+  /* .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  } */
