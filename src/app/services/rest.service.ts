@@ -9,7 +9,6 @@ export class RestService<T> {
   constructor(private http: HttpClient) {}
 
   public postData(baseUrl: string, restUrl: string, body: any): Observable<T> {
-
     return this.http.post<T>(baseUrl.concat(restUrl), body);
   }
 
