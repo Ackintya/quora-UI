@@ -12,7 +12,7 @@ export class RestService<T> {
     return this.http.post<T>(baseUrl.concat(restUrl), body);
   }
 
-  public getRestData(baseUrl: string, restUrl: string): Observable<T> {
-    return null;
+  public getData(baseUrl: string, restUrl: string): Observable<T> {
+    return this.http.get<T>(baseUrl.concat(restUrl));
   }
 }
