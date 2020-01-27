@@ -12,7 +12,7 @@ export class AnswercardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     console.log(this.questionsData);
   }
 

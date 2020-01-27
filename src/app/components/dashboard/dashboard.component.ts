@@ -22,21 +22,26 @@ export class DashboardComponent implements OnInit {
 
   constructor(private restService: RestService<any>) {}
 
-  ngOnInit():void {
-    this.restService
-      .getData(this.baseUrl, this.restUrl).subscribe((data: any) => {
-        if(data){
-          this.questionsData = data;
-          this.showAnswerCard = true;
-        }
-      });
+  ngOnInit(): void {
+    this.getAllQuestions();
   }
-  postQuestion(): void {
+ public postQuestion(): void {
     this.questionData.question = this.postQuestionForm.get("question").value;
     this.questionData.userId = window.localStorage.getItem("userId");
     this.restService
-      .postData(this.baseUrl, this.restUrl, this.questionData).subscribe(data => {
+      .postData(this.baseUrl, this.restUrl, this.questionData)
+      .subscribe(data => {
         this.postQuestionForm.reset();
       });
   }
+  
+  public getAllQuestions(): void {
+    this.restService.getData(this.baseUrl, this.restUrl).subscribe((data: Question[]) =>{
+    if(data) {
+      this.questionsData = data;
+      this.showAnswerCard = true;
+    }
+    });
+  }
+
 }
