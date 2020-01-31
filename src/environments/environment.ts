@@ -5,6 +5,10 @@
 export const environment = {
   production: false,
   baseUrl: 'http://localhost:8081',
+  authenticationUrl: {
+    login: '/login',
+    register: ''
+  },
   questionUrl: {
     postQuestion: '/question'
   }

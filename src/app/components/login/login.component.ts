@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { RestService } from 'src/app/services/rest.service';
 import { Route, Router } from '@angular/router';
+import { environment } from "../../../environments/environment";
 
 @Component({
   selector: 'app-login',
@@ -9,10 +10,10 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public baseUrl: string = '';
-  public restUrl: string = '';
+  public baseUrl = environment.baseUrl;
+  public restUrl = environment.authenticationUrl.login;
   public userCredentialForm = new FormGroup({
-    userName: new FormControl(''),
+    userId: new FormControl(''),
     password: new FormControl('')
   });
 
