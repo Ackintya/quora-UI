@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   baseUrl: 'http://localhost:8081',
   authenticationUrl: {
-    login: '/login',
+    login: '/auth/login',
     register: ''
   },
   questionUrl: {

@@ -16,6 +16,9 @@
       <button mat-raised-button color="primary">
         Submit
       </button>
+      <div *ngIf="invalidLogin" class="error">
+        <div>Invalid credentials.</div>
+      </div>
     </form>
   </mat-card-content>
 </mat-card>
