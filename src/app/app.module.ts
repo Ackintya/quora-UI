@@ -24,6 +24,7 @@ import {MatListModule} from '@angular/material/list';
 import { AnswerComponent } from './components/answer/answer.component';
 import {MatSelectModule} from '@angular/material/select';
 import { AnswercardComponent } from './components/answercard/answercard.component';
+import { httpInterceptorProviders } from './interceptors/http-interceptor';
 
 
 
@@ -58,7 +59,7 @@ import { AnswercardComponent } from './components/answercard/answercard.componen
     MatSelectModule,
     FormsModule
     ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
