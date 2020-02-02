@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
         (data:any) => {
           if (data) {
             window.sessionStorage.setItem('access_token', data.access_token);
+            window.sessionStorage.setItem('user_Id', data.user_Id);
             this.router.navigate(['/dashboard']);
           }
         },
